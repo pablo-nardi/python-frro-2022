@@ -23,10 +23,19 @@
 - tipos de datos iterables --> s = set([1,5,6]) o sino s = {1,3,4,5}
 - los set son mutables... para hacerlos inmutables hay que usar fronzenset([1,4,5])
 
-# BOOLEANOS
+## BOOLEANOS
 - bool es un derivado de int
 - 1 es true
 - 0 es false
 
-# FOR Y WHILE
+## FOR Y WHILE
 - Repasar todos los tipos de while y for
+
+# COMPRENSION DE LISTAS
+- Provee una manera concisa de crear listas
+- Consiste en pasar de esto:
+    - `squares = list(map(lambda x: x**2, range(10)))`
+- A esto:
+    - `squares = [x**2 for x in range(10)]`
+- Siempre empieza con corchetes, una expresion seguida de un for y despues cero o mas for o if
+- 

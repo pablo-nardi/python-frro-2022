@@ -4,17 +4,26 @@ from typing import List, Union
 
 
 #def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float, str]]:
-def numeros_al_final_basico():
+def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """Toma una lista de enteros y strings y devuelve una lista con todos los
     elementos numéricos al final.
     """
     pass # Completar
-    print('hola')
+
+    letras = []
+    enteros = []
+
+    for i in lista:
+        if type(i) == str:
+            letras.append(i)
+        else:
+            enteros.append(i)
+
+    return(letras + enteros)
 
 # NO MODIFICAR - INICIO
-#assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
+assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
 # NO MODIFICAR - FIN
-numeros_al_final_basico()
 
 ###############################################################################
 
@@ -22,6 +31,9 @@ numeros_al_final_basico()
 def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """Re-escribir utilizando comprensión de listas."""
     pass # Completar
+    letras = [i for i in lista if type(i) == str]
+    numeros = [i for i in lista if type(i) == int]
+    return(letras + numeros)
 
 
 # NO MODIFICAR - INICIO
@@ -37,7 +49,7 @@ def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float,
     Referencia: https://docs.python.org/3/library/functions.html#sorted
     """
     pass # Completar
-
+    return sorted(lista, key=lambda x: type(x) == str, reverse=True)
 
 # NO MODIFICAR - INICIO
 assert numeros_al_final_sorted([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
