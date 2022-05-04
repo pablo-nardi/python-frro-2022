@@ -37,5 +37,8 @@
     - `squares = list(map(lambda x: x**2, range(10)))`
 - A esto:
     - `squares = [x**2 for x in range(10)]`
-- Siempre empieza con corchetes, una expresion seguida de un for y despues cero o mas for o if
-- 
+- Siempre empieza con corchetes, una expresion seguida de un for y despues cero o mas for o if.
+
+
+# Funciones y Clases
+- Las funciones pueden devolver mas de un valor
