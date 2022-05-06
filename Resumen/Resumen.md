@@ -42,3 +42,14 @@
 
 # Funciones y Clases
 - Las funciones pueden devolver mas de un valor
+
+
+
+# MODULOS Y PAQUETES
+## Modulo 
+- archivo en python (py, pyd)
+
+## Paquete
+- carpeta que contiene otros paquetes o modulos
+
+Todos los paquetes son modulos pero no todos los modulos son paquetes, es decir, los paquetes son un tipo especial de modulos.
