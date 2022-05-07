@@ -6,7 +6,7 @@ https://youtu.be/A47sszUdTsM
 
 En este archivo se deben importar los módulos:
 - main.py as main
-- source/util.py as util
+- source/util.py as utile
 - source/controller/controller.py as controller
 
 Los imports deben hacerse de forma tal que funcionen con TODAS las formas

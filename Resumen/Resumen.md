@@ -47,6 +47,7 @@
 
 # MODULOS Y PAQUETES
 ## Modulo 
+- Los modulos son objetos
 - archivo en python (py, pyd)
 
 ## Paquete

@@ -1,8 +1,13 @@
 #from modulo1 import suma as sm
-import modulo1
+import sys
 
-#print(sm(3,5))
-if modulo1.name == 'modulo1':
-    print('hola')
-else:
-    print('chau')
+#sys.path.append('D:\PABLO ESTUDIO\Facultad 2022\Soporte\REPO-ESTUDIO\python-frro-2022\practico_02')
+#sys.path.append('D:\PABLO ESTUDIO\Facultad 2022\Soporte\REPO-ESTUDIO\python-frro-2022\practico_02\config')
+
+#PYTHONPATH='C:\Users\Vanshi\Desktop'
+
+print(PYTHONPATH)
+
+print('imprimiendo...')
+for x in sys.path:
+    print(x)
