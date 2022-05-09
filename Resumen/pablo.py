@@ -1,13 +1,18 @@
-#from modulo1 import suma as sm
-import sys
+class Producto:
+    def __init__(self,referencia,nombre,pvp,descripcion):
+        self.referencia = referencia
+        self.nombre = nombre
+        self.pvp = pvp
+        self.descripcion = descripcion
+        
+    def __str__(self):
+        return """REFERENCIA\t{} \nNOMBRE\t\t{} \nPVP\t\t{} \nDESCRIPCIÓN\t{}""".format(self.referencia,self.nombre,self.pvp,self.descripcion)
 
-#sys.path.append('D:\PABLO ESTUDIO\Facultad 2022\Soporte\REPO-ESTUDIO\python-frro-2022\practico_02')
-#sys.path.append('D:\PABLO ESTUDIO\Facultad 2022\Soporte\REPO-ESTUDIO\python-frro-2022\practico_02\config')
 
-#PYTHONPATH='C:\Users\Vanshi\Desktop'
+class Adorno(Producto):
+    pass
 
-print(PYTHONPATH)
+a = Adorno(2034,"Vaso adornado",15,"Vaso de porcelana adornado con árboles")
 
-print('imprimiendo...')
-for x in sys.path:
-    print(x)
+
+print(a)

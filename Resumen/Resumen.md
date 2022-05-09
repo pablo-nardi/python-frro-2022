@@ -40,11 +40,6 @@
 - Siempre empieza con corchetes, una expresion seguida de un for y despues cero o mas for o if.
 
 
-# Funciones y Clases
-- Las funciones pueden devolver mas de un valor
-
-
-
 # MODULOS Y PAQUETES
 ## Modulo 
 - Los modulos son objetos
@@ -54,3 +49,47 @@
 - carpeta que contiene otros paquetes o modulos
 
 Todos los paquetes son modulos pero no todos los modulos son paquetes, es decir, los paquetes son un tipo especial de modulos.
+
+
+# Clases
+
+## atributos y metodos
+- atributos -> variables
+- metodos -> funciones
+
+## Ejmplo muy bueno para entender:
+- valor de instancia, puntero ...
+
+
+class Galleta:
+    b=10
+    
+una_galleta = Galleta()
+una_galleta.sabor = "Salado"
+una_galleta.color = "Marrón"
+una_galleta.b=20 --> este valor de b esta atado a esta instancia y por mas que cam
+                    el valor de la clase. en esta instancia va a seguir siendo 20
+print("El sabor de esta galleta es",una_galleta.sabor)
+print(una_galleta.b)
+c = Galleta()
+print("c.b ",c.b)
+Galleta.b=50 --> porque que pase a ser 50, en b seguira siendo 20
+print("c.b ",c.b)
+print("una_galleta ",una_galleta.b)
+a = Galleta()
+ 
+
+## Metodos CONSTRUCTOR Y DESTRUCTOR
+class Pelicula:
+    # Constructor de clase (al crear la instancia)
+    def __init__(self,titulo,duracion,lanzamiento):
+        self.titulo = titulo
+        self.duracion = duracion
+        self.lanzamiento = lanzamiento
+        print("Se ha creado la película",self.titulo)
+        
+    # Destructor de clase (al borrar la instancia)
+    def __del__(self):
+        print("Se está borrando la película", self.titulo)
+        
+p = Pelicula("El Padrino",175,1972)
