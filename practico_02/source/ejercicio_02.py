@@ -9,7 +9,7 @@ Los imports deben hacerse de forma tal que funcionen con el siguiente
 comando (estando parados dentro de la carpeta practico_02):
 $PATH$/practico_02> python -m source.ejercicio_02
 """
-# CON EL -M SOLO FUNCIONA SI ESTOY EN LA CARPETA SOURCE, SI ME PARO EN PRACTICO_02 NO ME DA BOLA
+# CON EL -M SOLO FUNCIONA SI ESTOY EN LA CARPETA SOURCE, SI ME PARO EN PRACTICO_02 NO ME ANDA
 # 
 
 

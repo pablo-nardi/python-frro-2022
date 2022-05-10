@@ -22,7 +22,7 @@ import main as main
 from source import util
 from source.controller import controller as controller
 
-#print(main.name+' '+util.name+' '+controller.name)
+
 
 # NO MODIFICAR - INICIO
 assert main.name == "main"
