@@ -80,6 +80,9 @@ a = Galleta()
  
 
 ## Metodos CONSTRUCTOR Y DESTRUCTOR
+
+- Self sirve para hacer referencia a los metodos y atibutos base de una clase dentro de sus propios metodos
+
 class Pelicula:
     # Constructor de clase (al crear la instancia)
     def __init__(self,titulo,duracion,lanzamiento):

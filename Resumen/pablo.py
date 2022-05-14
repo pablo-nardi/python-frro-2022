@@ -1,18 +1,19 @@
-class Producto:
-    def __init__(self,referencia,nombre,pvp,descripcion):
-        self.referencia = referencia
-        self.nombre = nombre
-        self.pvp = pvp
-        self.descripcion = descripcion
-        
-    def __str__(self):
-        return """REFERENCIA\t{} \nNOMBRE\t\t{} \nPVP\t\t{} \nDESCRIPCIÓN\t{}""".format(self.referencia,self.nombre,self.pvp,self.descripcion)
+
+class Perro:
+    patas = 4
+
+    def ataque(self):
+        print('ladrar')
 
 
-class Adorno(Producto):
-    pass
+p = Perro()
+pe = Perro()
 
-a = Adorno(2034,"Vaso adornado",15,"Vaso de porcelana adornado con árboles")
+print(p.patas)
+print(pe.patas)
 
+p.patas = 6
+Perro.patas = 10
 
-print(a)
+print(p.patas)
+print(pe.patas)

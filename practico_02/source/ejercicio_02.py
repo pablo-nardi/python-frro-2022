@@ -14,7 +14,7 @@ $PATH$/practico_02> python -m source.ejercicio_02
 
 
 # Completar
-
+"""
 import sys
 sys.path.append('D:\PABLO ESTUDIO\Facultad 2022\Soporte\REPO-ESTUDIO\python-frro-2022\practico_02')
 sys.path.append('D:\PABLO ESTUDIO\Facultad 2022\Soporte\REPO-ESTUDIO\python-frro-2022\practico_02\config')
@@ -23,6 +23,14 @@ import data.database as database
 import main as main
 import config.test_config as test_config
 import config.db_config.migrations as migrations
+"""
+
+import main
+import source.util as util
+from source.data import database 
+import config.test_config as test_config
+import config.db_config.migrations as migrations
+
 
 # NO MODIFICAR - INICIO
 assert main.name == "main"
