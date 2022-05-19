@@ -1,52 +1,76 @@
-"""Propiedades"""
+"""Magic Methods"""
 
+from __future__ import annotations
+from typing import List
 
-class Auto:
-    """La clase auto tiene dos propiedades, precio y marca. La marca se define
-    obligatoriamente al construir la clase y siempre que se devuelve, se 
-    devuelve con la primer letra en mayúscula y no se puede modificar. El precio
-    puede modificarse pero cuando se muestra, se redondea a 2 decimales
-    
-    Restricción: Usar Properties
-    
-    Referencia: https://docs.python.org/3/library/functions.html#property"""
-
-    # Completar
-    def __init__(self, marca, precio: float) -> None:
-        self._marca = marca
-        self._precio = precio
-
-    def _get_marca(self):
-        return self._marca
-
-    def _get_precio(self):
-        return round(self._precio)
-
-    def _set_precio(self, precio):
-        self._precio = precio
-
-    nombre = property(
-        fget= _get_marca
-    )
-
-    precio = property(
-        fget= _get_precio,
-        fset= _set_precio
-    )
 
 # NO MODIFICAR - INICIO
-auto = Auto("Ford", 12875.456)
-print(auto.nombre)
-print(auto.precio)
+class Article:
+    """Agregar los métodos que sean necesarios para que los test funcionen.
+    Hint: los métodos necesarios son todos magic methods
+    Referencia: https://docs.python.org/3/reference/datamodel.html#basic-customization
+    """
 
-assert auto.nombre == "Ford"
-assert auto.precio == 12875.46
-auto.precio = 13874.349
-assert auto.precio == 13874.35
+    def __init__(self, name: str) -> None:
+        print('se creo el articulo ' + name)
+        self.name = name
 
-try:
-    auto.nombre = "Chevrolet"
-    assert False
-except AttributeError:
-    assert True
-# NO MODIFICAR - FIN
+    def __str__(self) -> str:
+        return self.name
+
+    # NO MODIFICAR - FIN
+
+    # Completar
+
+
+# NO MODIFICAR - INICIO
+class ShoppingCart:
+    """Agregar los métodos que sean necesarios para que los test funcionen.
+    Hint: los métodos necesarios son todos magic methods
+    Referencia: https://docs.python.org/3/reference/datamodel.html#basic-customization
+    """
+
+    def __init__(self, articles: List[Article] = None) -> None:
+        if articles is None:
+            self.articles = []
+        else:
+            self.articles = articles
+
+    def add(self, article: Article) -> ShoppingCart:
+        self.articles.append(article)
+        return self
+
+    def remove(self, remove_article: Article) -> ShoppingCart:
+        new_articles = []
+
+        for article in self.articles:
+            if article != remove_article:
+                new_articles.append(article)
+
+        self.articles = new_articles
+
+        return self
+
+    def __str__(self) -> str:
+        dato = '['
+        for x in self.articles:
+            dato = dato + str(x)
+
+        dato = dato + ']'
+        return dato
+    
+
+    # NO MODIFICAR - FIN
+
+    # Completar
+
+
+# NO MODIFICAR - INICIO
+
+manzana = Article("Manzana")
+pera = Article("Pera")
+tv = Article("Television")
+
+print(str(ShoppingCart().add(manzana).add(pera)))
+# Test de conversión a String
+#assert str(ShoppingCart().add(manzana).add(pera)) == "['Manzana', 'Pera']"

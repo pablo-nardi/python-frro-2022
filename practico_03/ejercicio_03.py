@@ -39,12 +39,12 @@ assert not Persona("Julia", 16, "M", 65, 162.4).es_mayor_edad()
 
 ###############################################################################
 
-"""
+
 from dataclasses import dataclass
 
 @dataclass
 class Persona:
-    Re-Escribir utilizando DataClasses
+    #Re-Escribir utilizando DataClasses
 
     # Completar
     nombre: str
@@ -62,4 +62,3 @@ class Persona:
 assert Persona("Juan", 18, "H", 85, 175.9).es_mayor_edad()
 assert not Persona("Julia", 16, "M", 65, 162.4).es_mayor_edad()
 # NO MODIFICAR - FIN
-"""
