@@ -67,13 +67,13 @@ class Galleta:
 una_galleta = Galleta()
 una_galleta.sabor = "Salado"
 una_galleta.color = "Marrón"
-una_galleta.b=20 --> este valor de b esta atado a esta instancia y por mas que cam
-                    el valor de la clase. en esta instancia va a seguir siendo 20
+una_galleta.b=20 --> este valor de b esta atado a esta instancia y por mas que camie el valor de la clase. en esta instancia va a seguir siendo 20
+
 print("El sabor de esta galleta es",una_galleta.sabor)
 print(una_galleta.b)
 c = Galleta()
 print("c.b ",c.b)
-Galleta.b=50 --> porque que pase a ser 50, en b seguira siendo 20
+Galleta.b=50 --> aunque pase a ser 50, en b seguira siendo 20
 print("c.b ",c.b)
 print("una_galleta ",una_galleta.b)
 a = Galleta()
@@ -96,3 +96,26 @@ class Pelicula:
         print("Se está borrando la película", self.titulo)
         
 p = Pelicula("El Padrino",175,1972)
+
+## Metodos y variables de clase
+
+### Los metodos de clase se declaran debajo de esto:
+#### @classmethod y en vez de self va cls 
+def metodo_de_clase(cls)
+
+### Las variables de clase de declaran fuera de las funciones
+Pero es una cuestion de nomenclatura
+porque si desde una instancia modificas la variable de clase
+lo que sucede es que Se crea una variables para esa instancia
+con el mismo nombre que la variables de clase y la variable
+de clase no se modifica.
+
+
+## dataclass
+Te permite definir que variables van en el constructor
+soloamente definiendo las variables para esa clase
+
+## Properties
+https://docs.python.org/3/library/functions.html#property
+
+Encapsula los metodos de instancia que cambian valores en las vriables de instancias

@@ -14,6 +14,8 @@ class Article:
     def __init__(self, name: str) -> None:
         self.name = name
 
+    def __str__(self) -> str:
+        return str(self.name)
     # NO MODIFICAR - FIN
 
     # Completar
@@ -46,6 +48,13 @@ class ShoppingCart:
         self.articles = new_articles
 
         return self
+
+    def mostrar(self, articles: List[Article]):
+        for x in articles:
+            print(x)
+
+    def __str__(self) -> str:
+        return str(self.articles)
 
     # NO MODIFICAR - FIN
 

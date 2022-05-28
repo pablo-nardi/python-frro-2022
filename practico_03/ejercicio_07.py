@@ -26,7 +26,7 @@ def actualizar_precio(articulos: List[Articulo], porcentaje: float) -> List[Arti
     
     # Completar
 
-
+    
 # NO MODIFICAR - INICIO
 nombres = ["sabana", "parlante", "computadora", "tasa", "botella", "celular"]
 precios = [10.25, 5.258, 350.159, 25.99, 18.759, 215.231]

@@ -12,12 +12,10 @@ class Article:
     """
 
     def __init__(self, name: str) -> None:
-        print('se creo el articulo ' + name)
         self.name = name
 
     def __str__(self) -> str:
-        return self.name
-
+        return str(self.name)
     # NO MODIFICAR - FIN
 
     # Completar
@@ -51,14 +49,12 @@ class ShoppingCart:
 
         return self
 
-    def __str__(self) -> str:
-        dato = '['
-        for x in self.articles:
-            dato = dato + str(x)
+    def mostrar(self, articles: List[Article]):
+        for x in articles:
+            print(x)
 
-        dato = dato + ']'
-        return dato
-    
+    def __str__(self) -> str:
+        return str(self.articles)
 
     # NO MODIFICAR - FIN
 
@@ -71,6 +67,11 @@ manzana = Article("Manzana")
 pera = Article("Pera")
 tv = Article("Television")
 
-print(str(ShoppingCart().add(manzana).add(pera)))
 # Test de conversión a String
 #assert str(ShoppingCart().add(manzana).add(pera)) == "['Manzana', 'Pera']"
+print(ShoppingCart().add(manzana).add(pera))
+sh = ShoppingCart()
+print(tv)
+
+
+
